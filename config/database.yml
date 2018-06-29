@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+env: &env
+  host: localhost
+  database: helloWorld
+  username: myuser
+  password: 'mypass'
+
+development: &development
+  <<: *default
+  <<: *env
+
+test:
+  <<: *default
+  <<: *env
+  database: helloWorldTest
+  timeout: 10000
+  pool: 10

@@ -1,0 +1,12 @@
+<div class = "hotel">
+      <h3>Hotel name: <%= @hotel.name %></h3>
+      <p>Stars: <%= @hotel.star %></p>
+      <p>Breakf: <%= @hotel.breakf %></p>
+      <p>Description: <%= @hotel.descr %></p>
+      <p>Photo: 
+      <%= image_tag @hotel.photo_url(:thumb).to_s%></p>
+      <p>User rate: <%= @hotel.rate %></p>
+</div>
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>

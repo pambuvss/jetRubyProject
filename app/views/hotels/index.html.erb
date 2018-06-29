@@ -1,0 +1,25 @@
+<h1>Hotel's list</h1>
+ 
+
+  <% @hotels.each do |hotel| %>
+    <div class = "hotel">
+      <h3>Hotel name: <%= hotel.name %></h3>
+      <p>Stars: <%= hotel.star %></p>
+      <p>Breakf: <%= hotel.breakf %></p>
+      <p>Description: <%= hotel.descr %></p>
+      <p>Adress: <%= hotel.addr %></p>
+      <p>Photo: 
+          <%= image_tag hotel.photo_url(:thumb).to_s%>
+      </p>
+      <p>Price: <%= hotel.price %></p>
+      <p>User rate: <%= hotel.rate %></p>
+      <p><%= link_to 'Show', hotel_path(hotel) %></p>
+      <p><%= link_to 'Edit', edit_hotel_path(hotel) %></p>
+      <p><%= link_to 'Delete', hotel_path(hotel),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
+
+    </div>
+
+  <% end %>
+<%= link_to 'New hotel', new_hotel_path %>

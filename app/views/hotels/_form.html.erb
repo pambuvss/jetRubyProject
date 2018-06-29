@@ -1,0 +1,60 @@
+<%= form_with model: @hotel, :html => {:multipart => true}, local: true do |form| %>
+ 
+  <% if @hotel.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@hotel.errors.count, "error") %> prohibited
+        this hotel from being saved:
+      </h2>
+      <ul>
+        <% @hotel.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :breakf %><br>
+    <%= form.text_field :breakf %>  
+  </p>
+    
+    <p>
+    <%= form.label :star, 'Level of hotel' %><br>
+    <%= form.text_field :star %>
+  </p>
+
+  <p>
+    <%= form.label :Description %><br>
+    <%= form.text_area :descr %>
+  </p>
+
+  <p>
+    <%= form.file_field :photo %>   
+  </p>
+ 
+  <p>
+    <%= form.label :addr, 'Adress:' %><br>
+    <%= form.text_field :addr %>
+  </p>
+
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>  
+  </p>
+
+  <p>
+    <%= form.label :rate %><br>
+    <%= form.text_field :rate %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
