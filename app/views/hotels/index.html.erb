@@ -14,12 +14,16 @@
       <p>Price: <%= hotel.price %></p>
       <p>User rate: <%= hotel.rate %></p>
       <p><%= link_to 'Show', hotel_path(hotel) %></p>
+      <% if user_signed_in? %>
       <p><%= link_to 'Edit', edit_hotel_path(hotel) %></p>
       <p><%= link_to 'Delete', hotel_path(hotel),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></p>
-
+      <%end%>
+      
     </div>
 
   <% end %>
+<% if user_signed_in? %>
 <%= link_to 'New hotel', new_hotel_path %>
+<%end%>
