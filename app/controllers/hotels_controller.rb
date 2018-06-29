@@ -1,6 +1,5 @@
 class HotelsController < ApplicationController
-http_basic_authenticate_with name:'',password:'',except:[:index,:show]
-protect_from_forgery prepend: true
+
 def index
     @hotels = Hotel.all
   end
