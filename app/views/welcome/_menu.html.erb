@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-ul {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -10,16 +10,16 @@ ul {
     background-color: #333;
 }
 
-li {
+.menu li {
     float: left;
     border-right:1px solid #bbb;
 }
 
-li:last-child {
+.menu li:last-child {
     border-right: none;
 }
 
-li a {
+.menu li a {
     display: block;
     color: white;
     text-align: center;
@@ -27,18 +27,22 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.menu li a:hover:not(.active) {
     background-color: green;
 }
 
-.active {
+.menu active {
     background-color: green;
 }
 </style>
 </head>
+
+
+
 <body>
 
-<ul>
+<div class = 'menu'>
+  <ul>
   <li>
     <%= link_to 'All hotels', controller: 'hotels' %>
   </li>
@@ -55,6 +59,8 @@ li a:hover:not(.active) {
       <% end %> 
   </li>
 </ul>
+
+</div>
 
 </body>
 </html>

@@ -9,6 +9,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'letter_opener'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+gem 'bootstrap', '~> 4.1.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
