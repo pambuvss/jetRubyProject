@@ -43,6 +43,9 @@ li a:hover:not(.active) {
     <%= link_to 'All hotels', controller: 'hotels' %>
   </li>
     <% if user_signed_in? %>
+        <li>
+          <%= link_to 'Add hotel', new_hotel_path %>
+        </li>
       <li style="float:right">
         <%= link_to current_user.email.to_s.split("@")[0] + ',  Sign out', destroy_user_session_path, method: :delete%>
       </li>

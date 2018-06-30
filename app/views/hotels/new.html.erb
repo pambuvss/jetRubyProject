@@ -1,6 +1,10 @@
 <%= render 'welcome/menu' %>
-<h1>New Hotel </h1>
 
-<%= render 'form' %>
- 
+<% if user_signed_in?%>
+	<h1>New Hotel </h1>
+	<%= render 'form' %>
+<% else %>
+	<%= render 'welcome/needSignIn' %>
+<% end %> 
+
 <%= link_to 'Back', hotels_path %>
