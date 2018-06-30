@@ -18,7 +18,7 @@ end
  
 def create
   @hotel = Hotel.new(hotel_params)
- 
+  @hotel.rate = 0
   if @hotel.save
     redirect_to @hotel
   else
