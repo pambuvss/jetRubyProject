@@ -1,18 +1,4 @@
-<h>   Hello Hotel </h>
-<%= link_to 'List of hotels', controller: 'hotels' %>
-
-
-<ul>
-	<% if user_signed_in? %>
-	<li>
-		<%= link_to 'Выход', destroy_user_session_path, method: :delete%>
-	</li>
-	<% else %>
-		<li><%= link_to 'Вход', new_user_session_path %></li>
-		<li><%= link_to 'Регистрация', new_user_registration_path %></li>
-	<% end %>	
-</ul>
-
+<%= render 'menu' %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: green;
+}
+
+.active {
+    background-color: green;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li>
+    <%= link_to 'All hotels', controller: 'hotels' %>
+  </li>
+    <% if user_signed_in? %>
+      <li style="float:right">
+        <%= link_to current_user.email.to_s.split("@")[0] + ', Sign out', destroy_user_session_path, method: :delete%>
+      </li>
+      <% else %>
+        <li style="float:right"><%= link_to 'Sign up', new_user_registration_path %></li>
+        <li style="float:right"><%= link_to 'Sign in', new_user_session_path %></li>
+      <% end %> 
+  </li>
+</ul>
+
+</body>
+</html>
