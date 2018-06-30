@@ -44,7 +44,7 @@ li a:hover:not(.active) {
   </li>
     <% if user_signed_in? %>
       <li style="float:right">
-        <%= link_to current_user.email.to_s.split("@")[0] + ', Sign out', destroy_user_session_path, method: :delete%>
+        <%= link_to current_user.email.to_s.split("@")[0] + ',  Sign out', destroy_user_session_path, method: :delete%>
       </li>
       <% else %>
         <li style="float:right"><%= link_to 'Sign up', new_user_registration_path %></li>
