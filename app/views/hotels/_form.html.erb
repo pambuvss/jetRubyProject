@@ -19,15 +19,20 @@
     <%= form.text_field :name %>
   </p>
 
-  <p>
-    <%= form.label :breakf %><br>
-    <%= form.text_field :breakf %>  
-  </p>
     
     <p>
-    <%= form.label :star, 'Level of hotel' %><br>
-    <%= form.text_field :star %>
-  </p>
+	    <%= form.label :breakf %><br>
+	    <%= form.radio_button :breakf, true %>yes
+	    <%= form.radio_button :breakf, false %>no
+	</p>
+	
+
+
+    <p>
+    	<%= form.label :star, 'Level of hotel' %><br>
+    	<%= form.select(:star, options_for_select([['1 star', 1],['2 star', 2],['3 star', 3],['4 star', 4],['5 star', 5],])) %>
+    </p>
+
 
   <p>
     <%= form.label :Description %><br>
@@ -50,7 +55,7 @@
 
   <p>
     <%= form.label :rate %><br>
-    <%= form.text_field :rate %>
+    <%= form.text_field :rate %>  
   </p>
 
   <p>
