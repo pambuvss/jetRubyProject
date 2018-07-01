@@ -1,3 +1,124 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body  {
+   background: #f2f3ee url('bg-tile.gif') top left repeat;
+   color: #4b2707;
+   font-size: 14px;
+   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+   width: 924px;
+   margin: 0 auto;
+   padding: 30px 24px;
+}
+
+h1, h2 {
+   color: #d17f38;
+   font-size: 40px;
+   font-weight: normal;
+   font-family: 'Love Ya Like A Sister', cursive;
+   line-height: 44px;
+   margin: 0;
+}
+
+h1  {
+   text-align: center;
+   padding: 0 0 20px;
+   background: url('header-divider.png') bottom center no-repeat;
+}
+
+h1 em {
+   font-style: normal;
+   color: #4b2707;
+}
+
+a:link {
+   color: #d17f38;
+}
+
+a:visited {
+   color: #d17f38;
+}
+
+a:hover {
+   color: #4b2707;
+}
+
+
+header nav {
+   text-align: center;
+}
+
+header nav ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   display: block;
+   line-height: 141px;
+}
+
+header nav ul li {
+   display: inline-block;
+   padding: 0 20px;
+}
+
+header nav ul li a {
+   text-transform: uppercase;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+header nav ul li a:hover {
+   color: #4b2707;
+   padding-top: 20px;
+   background: url('tiny-donut.png') top center no-repeat;
+}
+
+#reg {
+  float: right;
+}
+
+
+
+// .menu ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+//     background-color: #333;
+// }
+//
+// .menu li {
+//     float: left;
+//     border-right:1px solid #bbb;
+// }
+//
+// .menu li:last-child {
+//     border-right: none;
+// }
+//
+// .menu li a {
+//     display: block;
+//     color: white;
+//     text-align: center;
+//     padding: 14px 16px;
+//     text-decoration: none;
+// }
+//
+// .menu li a:hover:not(.active) {
+//     background-color: green;
+// }
+//
+// .menu active {
+//     background-color: green;
+// }
+
+#hero {
+   background: #e8c04f url('bg-tile-yellow.gif') top left repeat;
+}
+
+#hero .container {
+   position: relative;
+}
