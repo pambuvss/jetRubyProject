@@ -1,6 +1,3 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 body  {
    background: #f2f3ee url('bg-tile.gif') top left repeat;
    color: #4b2707;
@@ -81,40 +78,6 @@ header nav ul li a:hover {
 }
 
 
-
-// .menu ul {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     background-color: #333;
-// }
-//
-// .menu li {
-//     float: left;
-//     border-right:1px solid #bbb;
-// }
-//
-// .menu li:last-child {
-//     border-right: none;
-// }
-//
-// .menu li a {
-//     display: block;
-//     color: white;
-//     text-align: center;
-//     padding: 14px 16px;
-//     text-decoration: none;
-// }
-//
-// .menu li a:hover:not(.active) {
-//     background-color: green;
-// }
-//
-// .menu active {
-//     background-color: green;
-// }
-
 #hero {
    background: #e8c04f url('bg-tile-yellow.gif') top left repeat;
 }
@@ -122,3 +85,72 @@ header nav ul li a:hover {
 #hero .container {
    position: relative;
 }
+
+#sign-up, #sign-in, #resend-inf, #forgot-pas {
+   text-align: center;
+}
+
+.new_user {
+   padding: 30px 0;
+}
+
+div.actions > input {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #FDBE33 #000 #D77206;
+  border-radius: 6px;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+  transition: 0.2s;
+}
+
+div.actions > input:hover {
+   background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+
+div.actions > input:active {
+    background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+.actions {
+   padding: 10px 0;
+}
+
+footer.main {
+   background: #4b2707 url('bg-tile-brown.gif') top left repeat;
+   color: #f2f3ee;
+   padding: 30px 0;
+}
+
+footer.main a:hover {
+   color: #f2f3ee;
+}
+
+#uncopyright, #credits {
+   width: 240px;
+   float: left;
+   padding: 10px 0 10px 50px;
+}
+
+#uncopyright {
+   background: url('icon-recycle.png') center left no-repeat;
+}
+
+#credits {
+   background: url('icon-apple.png') center left no-repeat ;
+   float: right;
+   margin-top: 9px;
+}
+
+.clearfix:after {
+   visibility: hidden;
+   display: block;
+   content: "";
+   clear: both;
+   height: 0;
+}
+

@@ -20,10 +20,9 @@
       <p><%= link_to 'Delete', hotel_path(hotel),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></p>
-      <%end%>
-      
+      <%end%> 
     </div>
-
   <% end %>
+<%= will_paginate @hotels , previous_label: '-', next_label: '+', inner_window:1, outer_window: 0%>
 
-  <%= will_paginate @hotels , previous_label: '-', next_label: '+', inner_window:1, outer_window: 0%>
+<%= render 'welcome/footer' %>
