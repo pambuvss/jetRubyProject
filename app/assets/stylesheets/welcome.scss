@@ -9,6 +9,7 @@ body  {
    width: 924px;
    margin: 0 auto;
    padding: 30px 24px;
+  
 }
 
 h1, h2 {
@@ -86,7 +87,7 @@ header nav ul li a:hover {
    position: relative;
 }
 
-#sign-up, #sign-in, #resend-inf, #forgot-pas {
+#sign-up, #sign-in, #resend-inf, #forgot-pas, .container h2 {
    text-align: center;
 }
 
@@ -118,6 +119,25 @@ div.actions > input:active {
 
 .actions {
    padding: 10px 0;
+}
+
+.top-5 {
+  height: 500px;
+  border: 3px solid black;
+}
+
+.test-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel {
+  margin: 0 20px;
+ 
+}
+
+.pagination {
+  font-size: 20px;
 }
 
 footer.main {
