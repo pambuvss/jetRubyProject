@@ -1,0 +1,20 @@
+<div class="container">
+
+    <h2>Top five hotels</h2>
+      <div class="test-flex">
+        <% @hotels.each do |hotel| %>
+          <div class = "hotel">
+            <h3>Hotel name: <%= hotel.name %></h3>
+            <p>Stars: <%= hotel.star %></p>
+            <p>Breakf: <%= hotel.breakf %></p>
+            <p>Description: <%= hotel.descr %></p>
+            <p>Adress: <%= hotel.addr %></p>
+            <p>Photo: 
+                <%= image_tag hotel.photo_url(:thumb).to_s%>
+            </p>
+            <p>Price: <%= hotel.price %></p>
+            <p>User rate: <%= hotel.rate %></p> 
+          </div>
+        <% end %>
+      </div>
+</div>
