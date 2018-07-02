@@ -1,14 +1,17 @@
 <%= render 'welcome/menu' %>
 <div class="container">
-		<% if user_signed_in?%>
+
+
+	<% if user_signed_in?%>
 		<h2>New Hotel </h2>
 	
-		<%= render 'form' %>
+		<div class="form-border">
+			<%= render 'form' %>
 		<% else %>
 			<%= render 'welcome/needSignIn' %>
-		<% end %> 
-
-		<%= link_to 'Back', hotels_path %>
+		<% end %>
+			
+		</div>
 	
 </div>
 <%= render 'welcome/footer' %>
