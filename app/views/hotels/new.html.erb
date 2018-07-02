@@ -1,4 +1,6 @@
 <%= render 'welcome/menu' %>
+<div class="container">
+
 
 <% if user_signed_in?%>
 	<h2>New Hotel </h2>
@@ -8,5 +10,5 @@
 <% end %> 
 
 <%= link_to 'Back', hotels_path %>
-
+</div>
 <%= render 'welcome/footer' %>

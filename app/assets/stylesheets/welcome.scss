@@ -95,7 +95,7 @@ header nav ul li a:hover {
    padding: 30px 0;
 }
 
-div.actions > input {
+div.container > div.test-flex > div.hotel > p > a, div.actions > input, div.nice-hrefs > p > a, #hotel_star {
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -109,17 +109,18 @@ div.actions > input {
   transition: 0.2s;
 }
 
-div.actions > input:hover {
+div.container > div.test-flex > div.hotel > p > a:hover, div.actions > input:hover, div.nice-hrefs > p > a:hover, #hotel_star:hover {
    background: linear-gradient(#f5ae00, #f59500) #f5ae00;
 }
 
-div.actions > input:active {
+div.container > div.test-flex > div.hotel > p > a:active, div.actions > input:active, div.nice-hrefs > p > a:active, #hotel_star:active {
     background: linear-gradient(#f59500, #f5ae00) #f59500;
 }
 
 .actions {
    padding: 10px 0;
 }
+
 
 .top-5 {
   height: 500px;
@@ -138,6 +139,11 @@ div.actions > input:active {
 
 .pagination {
   font-size: 20px;
+}
+
+div.container > div.test-flex > div.hotel > p > a, div.nice-hrefs > p > a {
+	float: left;
+	margin-right: 10px;
 }
 
 footer.main {
