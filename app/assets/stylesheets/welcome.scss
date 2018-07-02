@@ -91,6 +91,11 @@ header nav ul li a:hover {
    text-align: center;
 }
 
+.form-border {
+  display: inline-block;
+  border: 3px solid #d17f38;
+}
+
 .new_user {
    padding: 30px 0;
 }
@@ -139,6 +144,7 @@ div.actions > input:active {
 .pagination {
   font-size: 20px;
 }
+
 
 footer.main {
    background: #4b2707 url('bg-tile-brown.gif') top left repeat;

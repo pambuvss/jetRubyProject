@@ -1,3 +1,4 @@
+<div class="form-border">
 <%= form_with model: @hotel, :html => {:multipart => true}, local: true do |form| %>
  
   <% if @hotel.errors.any? %>
@@ -13,7 +14,7 @@
       </ul>
     </div>
   <% end %>
- 
+
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -58,3 +59,4 @@
   </p>
  
 <% end %>
+</div>
