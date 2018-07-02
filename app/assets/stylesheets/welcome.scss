@@ -183,3 +183,72 @@ footer.main a:hover {
    height: 0;
 }
 
+
+
+
+#main {
+  position:relative;
+  margin: 0px auto;
+  padding: 0px;
+  width: 1750px;
+  height:800px;
+}
+#scr {
+  margin:0;
+  width: 1750px;
+  height: 800px;
+  background-color: white;
+  background-size:cover;  
+}
+#butt {
+  background: #fff;
+  position: absolute;
+  top: 250px;
+  width: 35px;
+  height: 35px;
+  font: 12pt arial,tahoma,sans-serif;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.left {
+  left:5px;
+}
+.right {
+  right:5px;
+}
+#description{
+  margin-right: 400px;
+  float: right;
+  width: 500px;
+}
+.hotel{
+  margin-bottom: 100px;
+}
+.style_image {
+  border: 10px solid #32CD37;
+  width: 600px;
+}
+.button7 {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: #32CD37;
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+} 
+.button7:hover { background: rgb(53, 167, 110); }
+.button7:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+#st {
+  float: right;
+  width: 500px;
+  font-size: 2em;
+  height: 800px;
+  text-align: center;
+  background: rgba(175,289,155,0.5);
+} 

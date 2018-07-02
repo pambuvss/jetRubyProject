@@ -1,20 +1,17 @@
-<div class="container">
-
-    <h2>Top five hotels</h2>
-      <div class="test-flex">
+  <h2 style="text-align: center";>Top five hotels</h2>
+      <div style="margin-top: 100px">
         <% @hotels.each do |hotel| %>
           <div class = "hotel">
-            <h3>Hotel name: <%= hotel.name %></h3>
-            <p>Stars: <%= hotel.star %></p>
-            <p>Breakf: <%= hotel.breakf %></p>
-            <p>Description: <%= hotel.descr %></p>
-            <p>Adress: <%= hotel.addr %></p>
-            <p>Photo: 
-                <%= image_tag hotel.photo_url(:thumb).to_s%>
-            </p>
-            <p>Price: <%= hotel.price %></p>
-            <p>User rate: <%= hotel.rate %></p> 
+          <div id = "description">
+            <h2>Hotel name: <%= hotel.name %></h2>
+            <h3>Stars: <%= hotel.star %></h3>
+            <h3>Breakf: <%= hotel.breakf %></h3>
+            <h3>Description: <%= hotel.descr %></h3>
+            <h3>Adress: <%= hotel.addr %></h3>
+            <h3>Price: <%= hotel.price %></h3>
+            <h3>User rate: <%= hotel.rate %></h3> 
+            </div>
+                <%= image_tag hotel.photo_url().to_s, :class => "style_image" %>  
           </div>
         <% end %>
       </div>
-</div>
