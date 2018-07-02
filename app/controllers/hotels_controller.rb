@@ -39,6 +39,10 @@ end
 
  def destroy
   @hotel = Hotel.find(params[:id])
+
+   @hotel.reviews.each do |r|
+         r.destroy
+     end
   @hotel.destroy
  
   redirect_to hotels_path
