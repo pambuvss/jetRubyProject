@@ -74,11 +74,6 @@ header nav ul li a:hover {
    background: url('tiny-donut.png') top center no-repeat;
 }
 
-#reg {
-  float: right;
-}
-
-
 #hero {
    background: #e8c04f url('bg-tile-yellow.gif') top left repeat;
 }
@@ -129,15 +124,11 @@ div.container > div.test-flex > div.hotel > p > a:active, div.actions > input:ac
    padding: 10px 0;
 }
 
-.test-flex {
-  display: flex;
-  flex-direction: column;
+.hotel {
+  display: inline-block;
+  margin-top: 100px;
 }
 
-.hotel {
-  margin: 0 20px;
- 
-}
 
 .pagination {
   font-size: 20px;
@@ -222,28 +213,22 @@ footer.main a:hover {
   float: right;
   width: 500px;
 }
-.hotel{
-  margin-bottom: 100px;
-}
+
 .style_image {
-  border: 10px solid #32CD37;
+  border: 7px solid #d17f38;
+  border-radius: 50px;
   width: 600px;
+  position: relative;
+  margin-top: -20px;
+  margin-left: 40px;
 }
-.button7 {
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  padding: .8em 1em calc(.8em + 3px);
-  border-radius: 3px;
-  background: #32CD37;
-  box-shadow: 0 -3px rgb(53,167,110) inset;
-  transition: 0.2s;
-} 
-.button7:hover { background: rgb(53, 167, 110); }
-.button7:active {
-  background: rgb(33,147,90);
-  box-shadow: 0 3px rgb(33,147,90) inset;
+
+.style_image_small {
+  border: 7px solid #d17f38;
+  border-radius: 50px;
+  width: 250px;
 }
+
 #st {
   float: right;
   width: 500px;
@@ -252,3 +237,16 @@ footer.main a:hover {
   text-align: center;
   background: rgba(175,289,155,0.5);
 } 
+
+.fix-text{
+  position: absolute;
+  left: 680px;
+  margin-top:25px;
+}
+
+.align-top5{
+ text-align: center; 
+ margin-top:30px;
+
+
+}
