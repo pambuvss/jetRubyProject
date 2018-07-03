@@ -1,17 +1,32 @@
 $(document).ready(function() {
     var isValidateEmail = false;
-    var isValidateMessage = false;
+    var isValidateDescription = false;
     var isValidateName = false;
-    var isValidateAdress = false;
+    var isValidateCountry = false;
     var isValidatePrice = false;
+    var isValidateState = false;
+    var isValidateCity = false;
+    var isValidateStreet = false;
 
     var regexName = /(^([а-яА-ЯёЁa-zA-Z0-9,.!-?]+\s*){0,29})(\s*)$/;
     $('#hotel_name').blur(function(){
-        isValidateName = validateField($(this),regexName,"Enter your name of hotel(no more 30 symbols)",isValidateName);
+        isValidateName = validateField($(this),regexName,"Enter the name of your hotel(no more 30 symbols)",isValidateName);
         activeSubmitButton();
     });
-    $('#hotel_addr').blur(function(){
-        isValidateAdress = validateField($(this),regexName,"Enter your adress of hotel(no more 30 symbols)",isValidateAdress);
+    $('#hotel_addr1').blur(function(){
+        isValidateCountry = validateField($(this),regexName,"Enter the county of your hotel(no more 30 symbols)",isValidateCountry);
+        activeSubmitButton();
+    });
+    $('#hotel_addr2').blur(function(){
+        isValidateState = validateField($(this),regexName,"Enter the state of your hotel(no more 30 symbols)",isValidateState);
+        activeSubmitButton();
+    });
+    $('#hotel_addr3').blur(function(){
+        isValidateCity = validateField($(this),regexName,"Enter the city of your hotel(no more 30 symbols)",isValidateCity);
+        activeSubmitButton();
+    });
+    $('#hotel_addr4').blur(function(){
+        isValidateStreet = validateField($(this),regexName,"Enter the street of your hotel(no more 30 symbols)",isValidateStreet);
         activeSubmitButton();
     });
 
@@ -20,7 +35,7 @@ $(document).ready(function() {
 
     var regexMessage = /(^([а-яА-ЯёЁa-zA-Z0-9,.!-?]+\s*){0,29})([а-яА-ЯёЁa-zA-Z0-9,.!-?]+[\s+]?)$/;
      $('#hotel_descr').blur(function(){
-         isValidateMessage = validateField($(this),regexMessage,"Enter your message(no more 300 symbols)",isValidateMessage);
+         isValidateDescription = validateField($(this),regexMessage,"Enter the description of your hotel(no more 300 symbols)",isValidateDescription);
          activeSubmitButton();
      });
 
@@ -37,7 +52,7 @@ $(document).ready(function() {
 
     function activeSubmitButton() {
         var submit = $(".dis-but");
-        if (isValidateEmail) {
+        if (isValidateEmail || (isValidateDescription && isValidateName && isValidateCity && isValidateCountry && isValidatePrice && isValidateState && isValidateStreet)) {
             submit.prop("disabled", false);
         } else {
             submit.prop("disabled", true);

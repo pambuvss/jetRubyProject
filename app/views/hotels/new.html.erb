@@ -5,13 +5,13 @@
 	<% if user_signed_in?%>
 		<h2>New Hotel </h2>
 	
-		<div class="form-border">
+		
 			<%= render 'form' %>
 		<% else %>
 			<%= render 'welcome/needSignIn' %>
 		<% end %>
-			
-		</div>
+		
+		
 	
 </div>
 <%= render 'welcome/footer' %>

@@ -1,19 +1,8 @@
+
 <%= form_with model: @hotel, :html => {:multipart => true}, local: true do |form| %>
  
-  <% if @hotel.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@hotel.errors.count, "error") %> prohibited
-        this hotel from being saved:
-      </h2>
-      <ul>
-        <% @hotel.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  
+  <div class="form-border">
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
@@ -70,5 +59,20 @@
   <div class="actions">
     <%= form.submit "Create Hotel", :class=> "dis-but", :disabled => true %>
   </div>
- 
+
+  </div>
+  <% if @hotel.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@hotel.errors.count, "error") %> prohibited
+      this hotel from being saved:
+    </h2>
+    <ul>
+      <% @hotel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+  
 <% end %>
