@@ -6,6 +6,7 @@
         <% @hotels.each do |hotel| %>
           <div class = "hotel">
             <h3>Hotel name: <%= hotel.name %></h3>
+            <p><%= image_tag hotel.photo_url(:thumb).to_s, :class => "style_image_small"%></p>
             <p>Stars: <%= hotel.star %></p>
             <p>Breakf: <%= hotel.breakf %></p>
             <p>Description: <%= hotel.descr %></p>

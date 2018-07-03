@@ -1,15 +1,16 @@
-  <h2 style="text-align: center";>Top five hotels</h2>
-      <div style="margin-top: 100px">
+  <h2 class = "align-top5">Top five hotels</h2>
+      <div style="margin-top: 10px">
         <% @hotels.each do |hotel| %>
           <div class = "hotel">
           <div id = "description">
+          <div class = "fix-text">
             <h2>Hotel name: <%= hotel.name %></h2>
             <h3>Stars: <%= hotel.star %></h3>
             <h3>Breakf: <%= hotel.breakf %></h3>
             <h3>Description: <%= hotel.descr %></h3>
             <h3>Adress: <%= hotel.addr1 + ', ' +hotel.addr2 + ', '+hotel.addr3 + ', ' + hotel.addr4 %></h3>
             <h3>Price: <%= hotel.price %></h3>
-            <h3>User rate: <%= hotel.rate %></h3> 
+            <h3>User rate: <%= hotel.rate %></h3> </div>
             </div>
                 <%= image_tag hotel.photo_url().to_s, :class => "style_image" %>  
           </div>
