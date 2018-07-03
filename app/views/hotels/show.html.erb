@@ -47,11 +47,10 @@
 	<%= form.select(:rate, options_for_select([['1 - awfully', 1],['2 - bad', 2],
 			['3 - alright', 3],['4 - good', 4],['5 - excellent', 5],])) %>
 	</p>
-  <%= recaptcha_tags %>
+  <div class="g-recaptcha" data-sitekey="6LcaF2IUAAAAAPR1Kq6Grr6CbcdhEBg5puLJB8V1"></div>
   <p>
     <%= form.submit %>
   </p>
-  <div class="g-recaptcha" data-sitekey="6LcaF2IUAAAAAPR1Kq6Grr6CbcdhEBg5puLJB8V1"></div>
 <% end %>
 <%else%>
 <h2>Please sign in for review this hotel</h2>
