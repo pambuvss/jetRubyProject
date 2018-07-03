@@ -102,6 +102,6 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 587,
   :enable_starttls_auto => true,
   :authentication       => :plain,
-  :domain               => "heroku.com"
+  :domain               => "hellohotel.herokuapp.com"
 }
 end
