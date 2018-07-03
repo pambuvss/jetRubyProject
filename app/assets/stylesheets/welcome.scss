@@ -71,10 +71,18 @@ header nav ul li a {
 header nav ul li a:hover {
    color: #4b2707;
    padding-top: 20px;
-   background: url('tiny-donut.png') top center no-repeat;
+   background: url('HH_super_mini.png') top center no-repeat;
+}
+
+#logo {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: 80px;
 }
 
 #hero {
+  width: 100%;
    background: #e8c04f url('bg-tile-yellow.gif') top left repeat;
 }
 
@@ -175,8 +183,6 @@ footer.main a:hover {
 }
 
 
-
-
 #main {
   position:relative;
   margin: 0px auto;
@@ -250,3 +256,34 @@ footer.main a:hover {
 
 
 }
+// validations css
+div.alert {
+  display: inline-block;
+  font-size: 18px;
+  color: #a94442;
+  position: absolute;
+  bottom: 1%;
+  left: 45%;
+}
+
+div#error_explanation h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #a94442;
+}
+
+div#error_explanation ul li {
+  font-size: 18px;
+  color: #a94442;
+  list-style: decimal;
+}
+.error input, .error textarea
+{
+    border-color: #a94442;
+    border-radius: 6px;
+}
+.error-messages{
+    margin: 10px;
+    color :#a94442;
+}
+
