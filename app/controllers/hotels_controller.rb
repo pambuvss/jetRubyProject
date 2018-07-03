@@ -51,7 +51,7 @@ end
 private
   def hotel_params
     params.require(:hotel).permit(:name, :star, :breakf, 
-      :descr, :photo, :addr, :rate, :price)
+      :descr, :photo, :addr1,:addr2,:addr3,:addr4, :rate, :price)
   end
 	
 end
