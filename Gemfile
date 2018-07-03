@@ -8,11 +8,11 @@ gem 'rails', '~> 5.2.0'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
-gem 'letter_opener'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'bootstrap', '~> 4.1.1'
 gem 'recaptcha'
+gem 'jquery-rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -50,6 +50,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'letter_opener'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
