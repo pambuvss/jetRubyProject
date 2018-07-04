@@ -1,13 +1,15 @@
-  <h2 class = "align-top5">Top five hotels</h2>
       <div style="margin-top: 10px">
         <% @hotels.each do |hotel| %>
           <div class = "hotel">
           <div id = "description">
           <div class = "fix-text">
-            <h2>Hotel name: <%= hotel.name %></h2>
+            <h2><%= link_to hotel.name, hotel_path(hotel) %></h2>
             <h3>Stars: <%= hotel.star %></h3>
             <h3>Breakf: <%= hotel.breakf %></h3>
-            <h3>Description: <%= hotel.descr %></h3>
+            <h3>Description:</h3>
+            <div class="prokrutka">
+                 <%= hotel.descr %>
+              </div>
             <h3>Adress: <%= hotel.addr1 + ', ' +hotel.addr2 + ', '+hotel.addr3 + ', ' + hotel.addr4 %></h3>
             <h3>Price: <%= hotel.price %></h3>
             <h3>User rate: <%= hotel.rate %></h3> </div>

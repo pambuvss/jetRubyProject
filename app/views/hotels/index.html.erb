@@ -1,31 +1,28 @@
 <%= render 'welcome/menu' %>
-<div class="container">
+<div class="container ">
 
-    <h2>Hotel's list</h2>
-      <div class="test-flex">
+    <h2 class = "align-top5">Hotel's list</h2>
+    <div class="test-flex">
         <% @hotels.each do |hotel| %>
           <div class = "hotel">
-            <h3>Hotel name: <%= hotel.name %></h3>
-            <p><%= image_tag hotel.photo_url(:thumb).to_s, :class => "style_image_small"%></p>
-            <p>Stars: <%= hotel.star %></p>
-            <p>Breakf: <%= hotel.breakf %></p>
-            <p>Description: <%= hotel.descr %></p>
-            <p>Adress: <%= hotel.addr1 + ', ' +hotel.addr2 + ', '+hotel.addr3 + ', ' + hotel.addr4 %></p>
-            <p>Photo: 
-                <%= image_tag hotel.photo_url(:thumb).to_s%>
-            </p>
-            <p>Price: <%= hotel.price %></p>
-            <p>User rate: <%= hotel.rate %></p>
-            <p><%= link_to 'Show', hotel_path(hotel) %></p>
-            <% if user_signed_in? %>
-            <p><%= link_to 'Edit', edit_hotel_path(hotel) %></p>
-            <p><%= link_to 'Delete', hotel_path(hotel),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %></p>
-            <%end%> 
+          <div class = "fix-text" style="margin-left: 60%;">
+              <h2><%= link_to hotel.name, hotel_path(hotel) %></h2>
+              <h3>Stars: <%= hotel.star %></h3>
+              <h3>Breakf: <%= hotel.breakf %></h3>
+              <h3>Description:</h3>
+              <div class="prokrutka">
+                 <%= hotel.descr %>
+              </div>
+              <h3>Adress: <%= hotel.addr1 + ', ' +hotel.addr2 + ', '+hotel.addr3 + ', ' + hotel.addr4 %></h3>
+              <h3>Price: <%= hotel.price %></h3>
+              <h3>User rate: <%= hotel.rate %></h3>
+              <p><%= link_to 'Show', hotel_path(hotel) %></p>
+            </div>
+              
+            <%= image_tag hotel.photo_url().to_s, :class => "style_image"%>
           </div>
         <% end %>
-      </div>
+        </div>
     <%= will_paginate @hotels , previous_label: '-', next_label: '+', inner_window:1, outer_window: 0%>
 </div>
 

@@ -1,19 +1,61 @@
 <%= render 'welcome/menu' %>
-<div class = "hotel">
-      <h3>Hotel name: <%= @hotel.name %></h3>
-      <p>Stars: <%= @hotel.star %></p>
-      <p>Breakf: <%= @hotel.breakf %></p>
-      <p>Description: <%= @hotel.descr %></p>
-      <p>Photo: 
-      <%= image_tag @hotel.photo_url(:thumb).to_s%></p>
-      <p>User rate: <%= @hotel.rate %></p>
+
+<div class = "big_banner">
+  <div class = "hotel" style="margin-top: 3%">
+      <%= image_tag @hotel.photo_url().to_s, :class => "style_image"%>
+        <div class="fix-text-show">
+        <div class="clearfix">
+        <% if user_signed_in? %>
+         <h2>Add a comment:</h2>
+         <%= form_with(model: [ @hotel, @hotel.reviews.build ], local: true) do |form| %>
+         <p>
+         <%= form.label :name, 'Write your name' %><br>
+         <%= form.text_field :name %>
+         </p>
+         <p>
+          <%= form.label :descr, 'Write your comment' %><br>
+          <%= form.text_area :descr %>
+        </p>
+      <p>
+      <%= form.label :rate, 'Level of hotel' %><br>
+      <%= form.select(:rate, options_for_select([['1 - awfully', 1],['2 - bad', 2],
+        ['3 - alright', 3],['4 - good', 4],['5 - excellent', 5],])) %>
+      </p>
+      <%= recaptcha_tags %>
+      <p>
+      <%= form.submit %>
+    </p>
+<% end %>
+<%else%>
+<h2>Please sign in for review this hotel</h2>
+<%end%>
+<div class="nice-hrefs">
+<p><%= link_to 'Edit', edit_hotel_path(@hotel) %> </p>
+</div>
+<div class="nice-hrefs"> 
+<p><%= link_to 'Back', hotels_path %></p>
+</div>
+</div>
+</div>
+<div class="fix-text" style="margin-top: 20px">
+<h2>Hotel name: <%= @hotel.name %> </h2>
+          <p>Stars: <%= @hotel.star %></p>
+          <p>Breakf: <%= @hotel.breakf %></p>
+          <p>Description: <%= @hotel.descr %></p>
+          <p>User rate: <%= @hotel.rate %></p>
+         </div>
+</div>
 </div>
 
-<% if @hotel.reviews.count === 0 %>
+
+        </div>
+      </div>
+    <% if @hotel.reviews.count === 0 %>
     <h2>No reviews</h2>
-<%else%>
+  <%else%>
     <h2>Reviews</h2>
 <%end%>
+</div>
 <div>
   <% @hotel.reviews.each do |r| %>
   <p>
@@ -30,39 +72,7 @@
   </p>
 </div>
 <% end %>
-<div class="clearfix">
-<% if user_signed_in? %>
-	<h2>Add a comment:</h2>
-<%= form_with(model: [ @hotel, @hotel.reviews.build ], local: true) do |form| %>
-  <p>
-    <%= form.label :name, 'Write your name' %><br>
-    <%= form.text_field :name %>
-  </p>
-  <p>
-    <%= form.label :descr, 'Write your comment' %><br>
-    <%= form.text_area :descr %>
-  </p>
-  	<p>
-	<%= form.label :rate, 'Level of hotel' %><br>
-	<%= form.select(:rate, options_for_select([['1 - awfully', 1],['2 - bad', 2],
-			['3 - alright', 3],['4 - good', 4],['5 - excellent', 5],])) %>
-	</p>
-  <%= recaptcha_tags %>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-<%else%>
-<h2>Please sign in for review this hotel</h2>
-<%end%>
-
-
-<div class="nice-hrefs">
-<p><%= link_to 'Edit', edit_hotel_path(@hotel) %> </p>
-</div>
-<div class="nice-hrefs"> 
-<p><%= link_to 'Back', hotels_path %></p>
-</div>
+ 
 </div>
 
 
