@@ -9,23 +9,23 @@ $(document).ready(function() {
     var isValidateStreet = false;
 
     var regexName = /(^([а-яА-ЯёЁa-zA-Z0-9,.!-?]+\s*){0,29})(\s*)$/;
-    $('#hotel_name').blur(function(){
+    $('#hotel_name').change(function(){
         isValidateName = validateField($(this),regexName,"Enter the name of your hotel(no more 30 symbols)",isValidateName);
         activeSubmitButton();
     });
-    $('#hotel_addr1').blur(function(){
+    $('#hotel_addr1').change(function(){
         isValidateCountry = validateField($(this),regexName,"Enter the county of your hotel(no more 30 symbols)",isValidateCountry);
         activeSubmitButton();
     });
-    $('#hotel_addr2').blur(function(){
+    $('#hotel_addr2').change(function(){
         isValidateState = validateField($(this),regexName,"Enter the state of your hotel(no more 30 symbols)",isValidateState);
         activeSubmitButton();
     });
-    $('#hotel_addr3').blur(function(){
+    $('#hotel_addr3').change(function(){
         isValidateCity = validateField($(this),regexName,"Enter the city of your hotel(no more 30 symbols)",isValidateCity);
         activeSubmitButton();
     });
-    $('#hotel_addr4').blur(function(){
+    $('#hotel_addr4').change(function(){
         isValidateStreet = validateField($(this),regexName,"Enter the street of your hotel(no more 30 symbols)",isValidateStreet);
         activeSubmitButton();
     });
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 
     var regexMessage = /(^([а-яА-ЯёЁa-zA-Z0-9,.!-?]+\s*){0,29})([а-яА-ЯёЁa-zA-Z0-9,.!-?]+[\s+]?)$/;
-     $('#hotel_descr').blur(function(){
+     $('#hotel_descr').change(function(){
          isValidateDescription = validateField($(this),regexMessage,"Enter the description of your hotel(no more 300 symbols)",isValidateDescription);
          activeSubmitButton();
      });
@@ -45,7 +45,7 @@ $(document).ready(function() {
     //     activeSubmitButton();
     // })
     var regexMail = /.+@.+\..+/i;
-    $("#user_email").blur(function () {
+    $("#user_email").change(function () {
         isValidateEmail = validateField($(this), regexMail, "Please enter correct e-mail", isValidateEmail);
         activeSubmitButton();
     });
@@ -59,7 +59,7 @@ $(document).ready(function() {
         }
     }
     var regexPrice = /(^(\d+$))(\s*)$/;
-    $('#hotel_price').blur(function () {
+    $('#hotel_price').change(function () {
         isValidatePrice = validateField($(this), regexPrice, "Please enter your price", isValidatePrice);
         activeSubmitButton();
     })
