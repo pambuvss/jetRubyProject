@@ -1,11 +1,24 @@
+<script type="text/javascript">
+	window.onload = function() { // запуск слайдера после загрузки документа
+  slider.init();
+  setInterval(function() { // ставим пятисекундный интервал для перелистывания картинок
+    slider.right();
+  },5000);
+};
+</script>
+
+
 <%= render 'menu' %>
 
-		<div id="hero">
-				<div class="container">
-				<%= image_tag("hotel_man.jpg", :alt => "Hotel Man") %>
-				</div>
-			</div>
-			<hr>
-	<%= render 'topFive'%>
+		
+<div id="main">
+  <button id="butt" class="left" onclick="slider.left();"><</button>
+  <div id="scr">
+  	<div id="st"></div>
+  </div>
+  <button id="butt" class="right" onclick="slider.right();">></button>
+</div>
+<h1 align="center" style="margin-top: 5%">Top 5 best hotels</h1>
+<%= render 'topFive'%>
 
-	<%= render 'footer' %>
+<%= render 'footer' %>
