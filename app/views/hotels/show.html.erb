@@ -1,8 +1,38 @@
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 <%= render 'welcome/menu' %>
 
 <div class = "big_banner">
+<h2 align="center" style="padding-top: 3%"><%= @hotel.name %> </h2>
   <div class = "hotel" style="margin-top: 3%">
-      <%= image_tag @hotel.photo_url().to_s, :class => "style_image"%>
+    <section id="big_img">
+      <article>
+        <a>
+          <figure>
+            <%= image_tag @hotel.photo_url().to_s%>
+            <figcaption>
+              <header> User rate </header>
+              <div class="fix-text" style="margin-top: 20px">
+              <img src="/images/star.png">
+          <h4><%= @hotel.rate %></h4>
+          </div>
+          <div class="fix-text" style="margin-top: 2vw; margin-left: 15vw">
+          <h3>Breakf: <%= @hotel.breakf %></h3>
+          <h3>hotel level: <%= @hotel.star %></h3>
+       </div>
+       <div>
+       <h3 style="margin-top: 12vw; margin-left: -1vw">Description: </h3>
+
+       </div>
+       <div class="d">
+       <%= @hotel.descr %>
+       </div>
+            </figcaption>
+          </figure>
+        </a>
+      </article>
+    </section>
         <div class="fix-text-show">
         <div class="clearfix">
         <% if user_signed_in? %>
@@ -18,46 +48,50 @@
         </p>
       <p>
       <%= form.label :rate, 'Level of hotel' %><br>
-      <%= form.select(:rate, options_for_select([['1 - awfully', 1],['2 - bad', 2],
-        ['3 - alright', 3],['4 - good', 4],['5 - excellent', 5],])) %>
-      </p>
-      <%= recaptcha_tags %>
+</p>
+<fieldset class="rating">
+    <legend>Please rate:</legend>
+     <%= form.radio_button :rate, 5, :class => "rating", :id => "star5"%><label for="star5" title="Excelent!">5 stars</label>
+     <%= form.radio_button :rate, 4, :class => "rating", :id => "star4"%><label for="star4" title="Good">4 stars</label>
+     <%= form.radio_button :rate, 3, :class => "rating", :id => "star3"%><label for="star3" title="normal">3 stars</label>
+     <%= form.radio_button :rate, 2, :class => "rating", :id => "star2"%><label for="star2" title="bad">2 stars</label>
+     <%= form.radio_button :rate, 1, :class => "rating", :id => "star1"%><label for="star1" title="Very bad">1 star</label>
+
+</fieldset>
+<div style="margin-top: 90px">
+      </p><br>
       <p>
-      <%= form.submit %>
-    </p>
+      <%= recaptcha_tags %>
+      </p>
+</div>
+
+<div class="nice-hrefs"> 
+<p><%= link_to 'Back', hotels_path %></p>
+<p><%= form.submit %></p>
+</div>
 <% end %>
 <%else%>
 <h2>Please sign in for review this hotel</h2>
 <%end%>
-<div class="nice-hrefs">
-<p><%= link_to 'Edit', edit_hotel_path(@hotel) %> </p>
 </div>
-<div class="nice-hrefs"> 
-<p><%= link_to 'Back', hotels_path %></p>
-</div>
-</div>
-</div>
-<div class="fix-text" style="margin-top: 20px">
-<h2>Hotel name: <%= @hotel.name %> </h2>
-          <p>Stars: <%= @hotel.star %></p>
-          <p>Breakf: <%= @hotel.breakf %></p>
-          <p>Description: <%= @hotel.descr %></p>
-          <p>User rate: <%= @hotel.rate %></p>
-         </div>
+
 </div>
 </div>
 
 
-        </div>
-      </div>
+</div>
+     <div style="margin-top: 2vw; margin-left: 15vw; height: 100%">
     <% if @hotel.reviews.count === 0 %>
+
     <h2>No reviews</h2>
   <%else%>
+
     <h2>Reviews</h2>
 <%end%>
 </div>
-<div>
+
   <% @hotel.reviews.each do |r| %>
+  <div class="comment">
   <p>
     <strong>Commenter:</strong>
     <%= r.name %>
@@ -72,7 +106,5 @@
   </p>
 </div>
 <% end %>
-</div>
-
 
 <%= render 'welcome/footer' %>
