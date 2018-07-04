@@ -115,6 +115,14 @@ header nav ul li a:hover {
    padding: 30px 0;
 }
 
+.article-h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+div.fix-text h2 a {
+  text-decoration: none;
+}
 div.container > div.test-flex > div.hotel > div.fix-text > p > a, div.actions > input, div.nice-hrefs > p > a, #hotel_star {
   display: inline-block;
   color: white;
@@ -223,7 +231,7 @@ footer.main a:hover {
   right:5px;
 }
 #description{
-overflow: hidden;
+  overflow: hidden;
   pozition: relative;
   margin-left:90%;
   width: 100%;
@@ -271,10 +279,11 @@ overflow: hidden;
 }
 
 .prokrutka {
-  border: 7px solid #d17f38;
-  height: 5vw;
+  border: 1px solid silver;
+  padding: 0 1vw;
+  height: 8vw;
   width: 100%;
-  background: white;
+  background:#f2f3ee;
   word-wrap: break-word;
   overflow: auto;
   font-size: 2vw;
@@ -301,6 +310,7 @@ div#error_explanation h2 {
   font-size: 24px;
   font-weight: bold;
   color: #a94442;
+  margin: 1vw 0;
 }
 
 div#error_explanation ul li {
