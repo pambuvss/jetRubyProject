@@ -1,5 +1,5 @@
 var slider = {
-  slides:["/images/1.jpg",'/images/2.jpg'],
+  slides:["/images/1.jpg",'/images/2.jpg','/images/3.jpg','/images/4.jpeg'],
   titles:["You can add hotels", "you can leave a response"],
   frame:0, // текущий кадр для отбражения - индекс картинки из массива
   set: function(image) { // установка нужного фона слайдеру

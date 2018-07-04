@@ -251,7 +251,7 @@ overflow: hidden;
   font-size: 2em;
   height: 800px;
   text-align: center;
-  background: rgba(900,164,999,0.9);
+  background: rgba(10,10,10,0.1);
 } 
 
 .fix-text{
@@ -273,6 +273,7 @@ overflow: hidden;
 
 .prokrutka {
   border: 7px solid #d17f38;
+  border-radius: 12px;
   height: 5vw;
   width: 100%;
   background: white;
