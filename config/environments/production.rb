@@ -95,13 +95,4 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'hellohotel.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-ActionMailer::Base.smtp_settings = {
-  :user_name            => 'app101626700@heroku.com',
-  :password             => '7yubllms0824',
-  :address              => "smtp.sendgrid.net",
-  :port                 => '25',
-  :enable_starttls_auto => true,
-  :authentication       => :plain,
-  :domain               => 'hellohotel.herokuapp.com'
-}
 end
