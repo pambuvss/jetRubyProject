@@ -2,7 +2,7 @@
 <%= form_with model: @hotel, :html => {:multipart => true}, local: true do |form| %>
  
   
-  <div class="form-border">
+  <div class="form-border" id="add-hotel-form">
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
