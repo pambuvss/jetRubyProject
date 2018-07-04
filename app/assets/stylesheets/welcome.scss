@@ -138,10 +138,17 @@ div#add-hotel-form > p > label {
   font-weight: bold;
 }
 
+div.fix-text h2 {
+  text-align: left;
+}
+
 div.fix-text h2 a {
   text-decoration: none;
+  text-transform: uppercase;
 }
-div.container > div.test-flex > div.hotel > div.fix-text > p > a, div.actions > input, div.nice-hrefs > p > a, #hotel_star {
+
+
+div.container > div.test-flex > div.hotel > div.fix-text > p > a, div.actions > input, div.nice-hrefs > p > a{
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -154,13 +161,31 @@ div.container > div.test-flex > div.hotel > div.fix-text > p > a, div.actions > 
   background: linear-gradient(#F3AE0F, #E38916) #E38916;
   transition: 0.2s;
 }
-div.container > div.test-flex > div.hotel > p > a:hover, div.actions > input:hover, div.nice-hrefs > p > a:hover, #hotel_star:hover {
+div.container > div.test-flex > div.hotel > p > a:hover, div.actions > input:hover, div.nice-hrefs > p > a:hover{
    background: linear-gradient(#f5ae00, #f59500) #f5ae00;
 }
 
 div.container > div.test-flex > div.hotel > p > a:active, div.actions > input:active, div.nice-hrefs > p > a:active{
     background: linear-gradient(#f59500, #f5ae00) #f59500;
+input.dis-but-grey {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: silver;
+  border-radius: 6px;
+  background: grey;
+  transition: 0.2s;
+  margin: 10px 0;
 }
+
+.dis-but-grey:hover {
+  background: grey;
+}
+
 
 .actions {
    padding: 10px 0;
@@ -284,6 +309,7 @@ footer.main a:hover {
   margin-top:-25px;
 }
 
+
 .fix-text-show{
   position: absolute;
   float: right;
@@ -295,6 +321,8 @@ font-weight: bold;
 text-transform: uppercase;
  text-align: center; 
  margin-top:30px;
+ font-weight: bold;
+ text-transform: uppercase;
 }
 
 .prokrutka {
@@ -319,7 +347,7 @@ text-transform: uppercase;
 div.alert {
   display: inline-block;
   font-size: 18px;
-  color: #a94442;
+  color: red;
   position: absolute;
   bottom: 1%;
   left: 45%;
@@ -328,22 +356,22 @@ div.alert {
 div#error_explanation h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #a94442;
+  color: red;
   margin: 1vw 0;
 }
 
 div#error_explanation ul li {
   font-size: 18px;
-  color: #a94442;
+  color: red;
   list-style: decimal;
 }
 .error input, .error textarea
 {
-    border-color: #a94442;
+    border-color: red;
     border-radius: 6px;
 }
 .error-messages{
     margin: 10px;
-    color :#a94442;
+    color:red ;
 }
-
+}
