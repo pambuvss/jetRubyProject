@@ -3,22 +3,27 @@ body  {
    color: #4b2707;
    font-size: 14px;
    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   position: relative;
+   min-height: 100%;
 }
 
 .container {
-   width: 50%;
+   width: 100%px;
    margin: 0 auto;
-   padding: 30px 24px;
+   padding: 0;
   
+}
+h3{
+  font-size: 1.5vW;
 }
 
 h1, h2 {
    color: #d17f38;
-   font-size: 40px;
    font-weight: normal;
    font-family: 'Love Ya Like A Sister', cursive;
-   line-height: 44px;
+   line-height: 2vw;
    margin: 0;
+   font-size: 3vw;
 }
 
 h1  {
@@ -54,7 +59,7 @@ header nav ul {
    padding: 0;
    list-style: none;
    display: block;
-   line-height: 141px;
+   line-height: 80px;
 }
 
 header nav ul li {
@@ -78,9 +83,13 @@ header nav ul li a:hover {
   width: 250px;
   height: 250px;
   position: relative;
-  top: 80px;
+  top: 7px;
+  margin: auto;
 }
 
+#reg{
+  width:30%
+}
 #hero {
   width: 100%;
    background: #e8c04f url('bg-tile-yellow.gif') top left repeat;
@@ -99,14 +108,15 @@ header nav ul li a:hover {
   border: 7px solid #d17f38;
   border-radius: 50px;
   padding: 30px;
-  margin: 50px 300px;
+  margin-left: 32vw;
+  margin-top: 2%;
 }
 
 .new_user {
    padding: 30px 0;
 }
 
-div.container > div.test-flex > div.hotel > p > a, div.actions > input, div.nice-hrefs > p > a, #hotel_star {
+div.container > div.test-flex > div.hotel > div.fix-text > p > a, div.actions > input, div.nice-hrefs > p > a, #hotel_star {
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -119,7 +129,6 @@ div.container > div.test-flex > div.hotel > p > a, div.actions > input, div.nice
   background: linear-gradient(#F3AE0F, #E38916) #E38916;
   transition: 0.2s;
 }
-
 div.container > div.test-flex > div.hotel > p > a:hover, div.actions > input:hover, div.nice-hrefs > p > a:hover, #hotel_star:hover {
    background: linear-gradient(#f5ae00, #f59500) #f5ae00;
 }
@@ -133,8 +142,9 @@ div.container > div.test-flex > div.hotel > p > a:active, div.actions > input:ac
 }
 
 .hotel {
-  display: inline-block;
-  margin-top: 100px;
+display: inline-block;
+  margin-top: 15%;
+  width: 70%;
 }
 
 
@@ -179,7 +189,6 @@ footer.main a:hover {
    display: block;
    content: "";
    clear: both;
-   height: 0;
 }
 
 
@@ -187,12 +196,12 @@ footer.main a:hover {
   position:relative;
   margin: 0px auto;
   padding: 0px;
-  width: 1750px;
+  width: 100%;
   height:800px;
 }
 #scr {
   margin:0;
-  width: 1750px;
+  width: 100%;
   height: 800px;
   background-color: white;
   background-size:cover;  
@@ -215,15 +224,16 @@ footer.main a:hover {
   right:5px;
 }
 #description{
-  margin-right: 400px;
-  float: right;
-  width: 500px;
+overflow: hidden;
+  pozition: relative;
+  margin-left:90%;
+  width: 100%;
 }
 
 .style_image {
   border: 7px solid #d17f38;
-  border-radius: 50px;
-  width: 600px;
+  border-radius: 20px;
+  width: 70%;
   position: relative;
   margin-top: -20px;
   margin-left: 40px;
@@ -231,30 +241,52 @@ footer.main a:hover {
 
 .style_image_small {
   border: 7px solid #d17f38;
-  border-radius: 50px;
+  border-radius: 20px;
   width: 250px;
 }
 
 #st {
   float: right;
-  width: 500px;
+  width: 1000%;
   font-size: 2em;
   height: 800px;
   text-align: center;
-  background: rgba(175,289,155,0.5);
+  background: rgba(900,164,999,0.9);
 } 
 
 .fix-text{
   position: absolute;
-  left: 680px;
-  margin-top:25px;
+  width: 30%;
+  margin-top:-25px;
 }
 
+.fix-text-show{
+  position: absolute;
+  float: right;
+  margin-top:-32%;
+  margin-left: 60%
+}
 .align-top5{
  text-align: center; 
  margin-top:30px;
+}
+
+.prokrutka {
+  border: 7px solid #d17f38;
+  height: 5vw;
+  width: 100%;
+  background: white;
+  word-wrap: break-word;
+  overflow: auto;
+  font-size: 2vw;
+}
 
 
+.big_banner{
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  padding-bottom: 15%;
 }
 // validations css
 div.alert {
