@@ -1,0 +1,42 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
+  # to ignore them, so only the ones explicitly set in this file are enabled.
+#  DisabledByDefault: true
+  Exclude:
+    - '**/templates/**/*'
+    - '**/vendor/**/*'
+    - '**/vendor/**/.*'
+    - '**/node_modules/**/*'
+    - 'actionpack/lib/action_dispatch/journey/parser.rb'
+    - 'bin/*'
+    - 'db/**/*'
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - 'config/initializers/devise.rb'
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 35
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Security/Eval:
+  Enabled: false  
