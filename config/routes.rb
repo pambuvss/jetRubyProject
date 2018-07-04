@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   root to: "home#index"
   resources :hotels do
-  resources :reviews
-	end
+    resources :reviews
+  end
 end
