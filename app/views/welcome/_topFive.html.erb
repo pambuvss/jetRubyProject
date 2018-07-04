@@ -14,7 +14,7 @@
             <h3>Price: <%= hotel.price %></h3>
             <h3>User rate: <%= hotel.rate %></h3> </div>
             </div>
-                <%= image_tag hotel.photo_url().to_s, :class => "style_image" %>  
+                <a href="<%= hotel_path(hotel) %>"><%= image_tag hotel.photo_url().to_s, :class => "style_image" %></a>
           </div>
         <% end %>
       </div>
