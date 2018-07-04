@@ -281,4 +281,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 config.secret_key = '4b2b34b75460123c18bf8806db7f26cdb3e719900e4fb9d5e3232a590851b1774f02bf6f092a243c189f1fe5cf462ae5ec9c932db3b6a1e96dd30b0d11cf9bd9'
+config.mailer_sender = "mail-to-send@from.com"
 end
