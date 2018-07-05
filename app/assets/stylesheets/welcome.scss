@@ -3,13 +3,14 @@ body  {
    color: #4b2707;
    font-size: 14px;
    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   min-height:80vh;
+   min-height:100vh;
+   min-width:100vh;
    position: relative;
-   padding-bottom:20vh;
+   padding-bottom:65vh;
 }
 
 .container {
-   width: 100%px;
+   width: 100%;
    margin: 0 auto;
    padding: 0;
   

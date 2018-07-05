@@ -18,7 +18,11 @@
           <h4><%= @hotel.rate %></h4>
           </div>
           <div class="fix-text" style="margin-top: 2vw; margin-left: 15vw">
-          <h3>Breakf: <%= @hotel.breakf %></h3>
+          <% if @hotel.breakf == "true"%>
+          <h3>Breakf: Yes</h3>
+          <%else%>
+          <h3>Breakfast: No</h3>
+          <%end%>
           <h3>hotel level: <%= @hotel.star %></h3>
        </div>
        <div>
@@ -98,7 +102,31 @@
   </p>
   <p>
     <strong>Rate:</strong>
-    <%= r.rate %>
+    <% if r.rate == 5%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if r.rate == 4%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if r.rate == 3%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if r.rate == 2%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if r.rate == 1%>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
   </p>
   <p>
     <strong>Description:</strong>
