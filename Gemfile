@@ -15,6 +15,7 @@ gem 'recaptcha'
 gem 'jquery-rails'
 gem 'rubocop', '~> 0.57.2'
 gem 'rubycritic'
+gem "figaro"
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
