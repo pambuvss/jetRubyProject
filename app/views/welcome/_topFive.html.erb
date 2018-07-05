@@ -4,16 +4,72 @@
           <div id = "description">
           <div class = "fix-text">
             <h2><%= link_to hotel.name, hotel_path(hotel) %></h2>
-            <h3>Stars: <%= hotel.star %></h3>
-            <h3>Breakf: <%= hotel.breakf %></h3>
+            <h3>Stars:</h3>
+             <% if hotel.star == 5%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.star == 4%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.star == 3%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.star == 2%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.star == 1%>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+             <% if hotel.breakf == "true"%>
+          <h3>Breakf: Yes</h3>
+          <%else%>
+          <h3>Breakfast: No</h3>
+          <%end%>
             <h3>Description:</h3>
             <div class="prokrutka">
                  <%= hotel.descr %>
               </div>
             <h3>Adress: <%= hotel.addr1 + ', ' +hotel.addr2 + ', '+hotel.addr3 + ', ' + hotel.addr4 %></h3>
             <h3>Price: <%= hotel.price %></h3>
-            <h3>User rate: <%= hotel.rate %></h3> </div>
+            <h3>User rate:</h3> 
+       <% if hotel.rate == 5%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.rate == 4%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.rate == 3%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.rate == 2%>
+             <a><img src="/images/mini_star.png"></a>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
+          <% if hotel.rate == 1%>
+             <a><img src="/images/mini_star.png"></a>
+             <%end%>
             </div>
+            </div>
+
                 <a href="<%= hotel_path(hotel) %>"><%= image_tag hotel.photo_url().to_s, :class => "style_image" %></a>
           </div>
         <% end %>
